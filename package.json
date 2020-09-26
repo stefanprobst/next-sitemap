@@ -1,0 +1,101 @@
+{
+  "name": "@stefanprobst/next-sitemap",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "git@github.com:stefanprobst/next-sitemap.git",
+  "author": "Stefan Probst <stefanprobst@kolabnow.com>",
+  "license": "MIT",
+  "bin": {
+    "create-sitemap": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "format": "prettier . -l --ignore-path .gitignore",
+    "format:fix": "yarn format --write",
+    "lint": "eslint . --ignore-path .gitignore",
+    "lint:fix": "yarn lint --fix",
+    "prebuild": "yarn clean",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "@prettier/plugin-xml": "^0.12.0",
+    "mri": "^1.1.6",
+    "prettier": "^2.1.2",
+    "unist-builder": "^2.0.3",
+    "xast-util-to-xml": "^1.0.0",
+    "xastscript": "^1.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@stefanprobst/commitlint-config": "^1.0.1",
+    "@stefanprobst/eslint-config-node": "^1.0.5",
+    "@stefanprobst/prettier-config": "^1.0.0",
+    "@types/mri": "^1.1.0",
+    "@types/node": "^14.11.2",
+    "@types/unist": "^2.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.0.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.4.0",
+    "next": "^9.5.3",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.0.3"
+  },
+  "peerDependencies": {
+    "next": "^9.5.0"
+  },
+  "engines": {
+    "node": ">=12.9",
+    "yarn": "^1"
+  },
+  "commitlint": {
+    "extends": [
+      "@stefanprobst/commitlint-config"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "@stefanprobst/eslint-config-node"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "*.ts"
+        ],
+        "rules": {
+          "import/no-unresolved": [
+            "off"
+          ],
+          "node/no-missing-import": [
+            "off"
+          ]
+        }
+      }
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(js|ts)": "eslint --cache --fix",
+    "*.(json,md)": "prettier --write"
+  },
+  "prettier": "@stefanprobst/prettier-config"
+}
