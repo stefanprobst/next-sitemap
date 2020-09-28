@@ -1583,10 +1583,17 @@
   resolved "https://registry.npmjs.org/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
   integrity sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
 
-"@types/unist@^2.0.3":
+"@types/unist@*":
   version "2.0.3"
   resolved "https://registry.npmjs.org/@types/unist/-/unist-2.0.3.tgz#9c088679876f374eb5983f150d4787aa6fb32d7e"
   integrity sha512-FvUupuM3rlRsRtCN+fDudtmytGO6iHJuuRKS1Ss0pG5z8oX0diNEw94UEL7hgDbpN94rgaK5R7sWm6RrSkZuAQ==
+
+"@types/xast@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@types/xast/-/xast-1.0.0.tgz#3b060abbc3fcc8b0139bef8466306ceeeee18711"
+  integrity sha512-iRrj+0ggHym5Cx8bj4L47RLji72UVhivP9lMsGc5LVb3bVXL6w+56BjOGe0515U9XQaA8LyEzYscW+rKecOdxw==
+  dependencies:
+    "@types/unist" "*"
 
 "@types/yargs-parser@*":
   version "15.0.0"
