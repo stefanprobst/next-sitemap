@@ -1,4 +1,4 @@
-import { promises as fs, createWriteStream } from 'fs'
+import { promises as fs, createWriteStream, existsSync } from 'fs'
 import { join } from 'path'
 import { pipeline, Readable } from 'stream'
 import { promisify } from 'util'
@@ -47,6 +47,11 @@ export default async function generate({
   shouldGzip,
   robots,
 }: Options): Promise<void> {
+  /** ensure public folder exists */
+  if (!existsSync(PUBLIC_DIR)) {
+    await fs.mkdir(PUBLIC_DIR, { recursive: true })
+  }
+
   function createLink(route: string): Element {
     return x('url', [x('loc', String(new URL(route, baseUrl)))])
   }
