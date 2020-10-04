@@ -1,6 +1,6 @@
 {
   "name": "@stefanprobst/next-sitemap",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "git@github.com:stefanprobst/next-sitemap.git",
@@ -27,8 +27,8 @@
     "mri": "^1.1.6",
     "prettier": "^2.1.2",
     "unist-builder": "^2.0.3",
-    "xast-util-to-xml": "^1.0.0",
-    "xastscript": "^1.0.1"
+    "xast-util-to-xml": "^2.0.0",
+    "xastscript": "^2.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",

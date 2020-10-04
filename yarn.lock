@@ -6053,10 +6053,10 @@ nice-try@^1.0.4:
   resolved "https://registry.npmjs.org/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
-node-fetch@2.6.0, node-fetch@^2:
-  version "2.6.1"
-  resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
-  integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
+node-fetch@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
+  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
 
 node-html-parser@^1.2.19:
   version "1.2.21"
@@ -7702,10 +7702,10 @@ string_decoder@~1.1.1:
   dependencies:
     safe-buffer "~5.1.0"
 
-stringify-entities@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/stringify-entities/-/stringify-entities-2.0.0.tgz#fa7ca6614b355fb6c28448140a20c4ede7462827"
-  integrity sha512-fqqhZzXyAM6pGD9lky/GOPq6V4X0SeTAFBl0iXb/BzOegl40gpf/bV3QQP7zULNYvjr6+Dx8SCaDULjVoOru0A==
+stringify-entities@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.npmjs.org/stringify-entities/-/stringify-entities-3.0.1.tgz#32154b91286ab0869ab2c07696223bd23b6dbfc0"
+  integrity sha512-Lsk3ISA2++eJYqBMPKcr/8eby1I6L0gP0NlxF8Zja6c05yr/yCYyb2c9PwXjd08Ib3If1vn1rbs1H5ZtVuOfvQ==
   dependencies:
     character-entities-html4 "^1.0.0"
     character-entities-legacy "^1.0.0"
@@ -8519,18 +8519,21 @@ ws@^7.2.3:
   resolved "https://registry.npmjs.org/ws/-/ws-7.3.1.tgz#d0547bf67f7ce4f12a72dfe31262c68d7dc551c8"
   integrity sha512-D3RuNkynyHmEJIpD2qrgVkc9DQ23OrN/moAwZX4L8DfvszsJxpjQuUq3LMx6HoYji9fbIOBY18XWBsAux1ZZUA==
 
-xast-util-to-xml@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/xast-util-to-xml/-/xast-util-to-xml-1.0.0.tgz#8dcd6e1e7b78214cac78954a9134002dbd728d8f"
-  integrity sha512-nPQAtr5gWCjyD0DaVGuqvZNMbJIMjEDwUskB/+R9emq6Hx4IH+mXdlXRLzjErU282AXxyk0vU7lHKPvbKlkyBg==
+xast-util-to-xml@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/xast-util-to-xml/-/xast-util-to-xml-2.0.0.tgz#eb915820cd44a795fc700350609f4a0fcc808f44"
+  integrity sha512-/vhslN9cYBvkkD+EBJXqKW0jrKRt1Lr94HLzhPz2w9obgqf84Oz6p827m1xoERSJhcIzmA/ivyospZ7d6CI6fw==
   dependencies:
+    "@types/xast" "^1.0.0"
     ccount "^1.0.0"
-    stringify-entities "^2.0.0"
+    stringify-entities "^3.0.0"
 
-xastscript@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/xastscript/-/xastscript-1.0.1.tgz#ed56beb6c478aff321a995e2941548ed8fb824f0"
-  integrity sha512-2RAz+y1wg3O6hZxV/7bzx6xKmrZIL6DiYiPX+GJYOubgWstIKhbHNDiBDrAPanyFWHw6gQiN0isoZ70QtbuqwQ==
+xastscript@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/xastscript/-/xastscript-2.0.0.tgz#8a707a3fbdfb8d2e6dc0b6cca14553268c809c34"
+  integrity sha512-s9WREjttEf6QyvNQhRMMwt0MB+1Z0IOr909wNbHZRJKJiEJOWt6qaS+c17KVbQ3Oi/yCRPYrHW9yMaZafVKQTg==
+  dependencies:
+    "@types/xast" "^1.0.0"
 
 xml-name-validator@^3.0.0:
   version "3.0.0"
