@@ -90,7 +90,7 @@ export default async function generate({
   const prerenderedPages = Object.keys(prerenderManifest.routes)
   const staticPages = pages.filter((page) => !dynamicRoutes.includes(page))
 
-  const routes = [...staticPages, ...prerenderedPages]
+  const routes = Array.from(new Set([...staticPages, ...prerenderedPages]))
     .filter((route) => filter(route) && !INTERNAL_ROUTES.has(route))
     .sort()
 
