@@ -1,6 +1,6 @@
 {
   "name": "@stefanprobst/next-sitemap",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "git@github.com:stefanprobst/next-sitemap.git",
@@ -56,7 +56,7 @@
     "typescript": "^4.0.3"
   },
   "peerDependencies": {
-    "next": "^9.5.0||^10.0.0"
+    "next": "^9.5.0||^10.0.0||^11.0.0"
   },
   "engines": {
     "node": ">=12.9",
